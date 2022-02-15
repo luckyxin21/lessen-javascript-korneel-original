@@ -6,7 +6,8 @@
 function removeDoubles(anArray) {}
 
 /**
- * Given an array of numbers, return the same array containing only even numbers
+ * Given an array of numbers, return the s
+ * ame array containing only even numbers
  * @param {number[]} anArray
  * @return {number[]}
  */
@@ -38,7 +39,8 @@ function findSimilars(anArray, otherArray) {}
 
 /**
  * Given an array return an array with the same values but in a random order
- * @param anArray
+ * @param {array} anArray
+ * @return {array}
  */
 function scramble(anArray) {}
 

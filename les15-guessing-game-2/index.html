@@ -13,9 +13,11 @@
     <body>
         <main>
             <p>Guesses: <span id="guess-count">0</span></p>
-            <label for="guess">Guess a number between 0 and 10:</label>
-            <input type="number" id="guess" name="guess" />
-            <button id="guess-btn">Guess</button>
+            <form id="guess-form">
+                <label for="guess">Guess a number between 0 and 10:</label>
+                <input type="number" id="guess" name="guess" />
+                <button type="submit" id="guess-btn">Guess</button>
+            </form>
             <p id="message-container"></p>
             <button id="play-again-btn" class="hidden">Play again</button>
         </main>

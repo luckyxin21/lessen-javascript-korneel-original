@@ -3,6 +3,7 @@ let $guessBtn = document.getElementById('guess-btn');
 let $messageContainer = document.getElementById('message-container');
 let $playAgainBtn = document.getElementById('play-again-btn');
 let $guessCount = document.getElementById('guess-count');
+let $guessForm = document.getElementById('guess-form');
 
 const MinNum = 1;
 const MaxNum = 10;
@@ -27,6 +28,7 @@ function init() {
 }
 
 function guessBtnClicked(event) {
+    event.preventDefault();
     let curGuess = parseInt($guessInput.value);
 
     // if (gameOver) {
@@ -61,6 +63,8 @@ function guessBtnClicked(event) {
     }
 }
 
-$guessBtn.addEventListener('click', guessBtnClicked);
+// $guessBtn.addEventListener('click', guessBtnClicked);
+$guessForm.addEventListener('submit', guessBtnClicked);
+
 $playAgainBtn.addEventListener('click', init);
 init();

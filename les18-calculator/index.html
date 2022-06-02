@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Calculator</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="display">
+                <div class="display__top" id="display-top">
+                    <span></span>
+                </div>
+                <div id="display-bottom" class="display__bottom"></div>
+            </div>
+            <div class="inputs">
+                <div class="inputs__top">
+                    <button type="button" class="inputs__btn">C</button
+                    ><button type="button" class="inputs__btn hide">ⁿ</button
+                    ><button type="button" class="inputs__btn hide">√</button
+                    ><button type="button" class="inputs__btn">=</button>
+                </div>
+                <div class="inputs__right" id="input-operations">
+                    <button type="button" class="inputs__btn">/</button>
+                    <button type="button" class="inputs__btn">*</button
+                    ><button type="button" class="inputs__btn">-</button
+                    ><button type="button" class="inputs__btn">+</button>
+                </div>
+                <div class="inputs__numbers" id="input-numbers">
+                    <button type="button" class="inputs__btn">1</button
+                    ><button type="button" class="inputs__btn">2</button
+                    ><button type="button" class="inputs__btn">3</button
+                    ><button type="button" class="inputs__btn">4</button
+                    ><button type="button" class="inputs__btn">5</button
+                    ><button type="button" class="inputs__btn">6</button
+                    ><button type="button" class="inputs__btn">7</button
+                    ><button type="button" class="inputs__btn">8</button
+                    ><button type="button" class="inputs__btn">9</button>
+                    <button type="button" class="inputs__btn hide">+/-</button>
+                    <button type="button" class="inputs__btn">0</button>
+                    <button type="button" class="inputs__btn hide">.</button>
+                </div>
+            </div>
+            <div class="history"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -23,7 +23,7 @@ function drawDisplayTop() {
         $displayTop.innerText = '';
         return;
     }
-    
+
     $displayTop.innerText = parseFloat(displayTop) + ' ' + operation;
 }
 
@@ -70,7 +70,7 @@ function calculate() {
             break;
     }
 
-    displayTop = result;
+    displayTop = result.toString();
     displayBottom = '';
     operation = '';
 
@@ -100,6 +100,11 @@ function clickInputNumbers(event) {
 
         displayBottom += curNumber;
         drawDisplayBottom();
+        
+        if (displayTop.length > 0 && operation.length === 0) {
+            displayTop = '';
+            drawDisplayTop();
+        }
     }
 }
 

@@ -78,12 +78,6 @@ function removeDoneItem($box) {
   FUNCTIONALITY
  ***************/
 
-function init() {
-    drawEmptyTodoList();
-    drawEmptyDoneList();
-    drawEmptyTextArea();
-}
-
 function saveBtnClicked() {
     let text = $textArea.value;
     drawNewTodo(text);
@@ -95,7 +89,7 @@ function clearAllBtnClicked() {
     drawEmptyDoneList();
 }
 
-function doneBtnClicked($curDoneBtn) {
+function setTodoDone($curDoneBtn) {
     let $box = $curDoneBtn.closest('.box');
     let text = $curDoneBtn.previousElementSibling.innerText;
 
@@ -103,7 +97,7 @@ function doneBtnClicked($curDoneBtn) {
     drawNewDone(text);
 }
 
-function boxClicked($box) {
+function activateBox($box) {
     if ($box.classList.contains('active')) {
         return;
     }
@@ -113,18 +107,28 @@ function boxClicked($box) {
     if ($curActiveBox) {
         $curActiveBox.classList.remove('active');
     }
-    
+
     $box.classList.add('active');
+}
+
+/****************
+  EVENT HANDLERS
+ ****************/
+
+function init() {
+    drawEmptyTodoList();
+    drawEmptyDoneList();
+    drawEmptyTextArea();
 }
 
 function todoListClicked(event) {
     if (event.target.matches('.done-btn')) {
-        doneBtnClicked(event.target);
+        setTodoDone(event.target);
     }
 
     if (event.target.matches('.box') || event.target.matches('.box p')) {
         let $box = event.target.closest('.box');
-        boxClicked($box);
+        activateBox($box);
     }
 }
 
